@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
-from django.conf.urls.defaults import patterns, url
+# Django 1.6 update
+try:
+    from django.conf.urls.defaults import patterns, url
+except:
+    from django.conf.urls import patterns, url
+    
 from django_qbe.exports import formats
 
 urlpatterns = patterns('django_qbe.views',
